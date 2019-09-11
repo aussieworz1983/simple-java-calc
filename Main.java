@@ -224,8 +224,18 @@ public class Main
                         sum1= Integer.parseInt(out.getText());
                         out.setText("-");
                         num1Set=true;
-                    }else{
+                        System.out.println("sum 1 is "+sum1+" sum 2 is "+sum2);
+                    }else if(num1Set==true){
+                        sum2= Integer.parseInt(out.getText());
+                        out.setText("");
 
+                        total = addSum();
+                        String finalNum = Integer.toString(total);
+                        //out.setText(finalNum);
+                        sum1=0;
+                        sum2=0;
+                        num1Set=false;
+                        System.out.println("sum 1 is "+sum1+" sum 2 is "+sum2+" "+" "+finalNum);
                     }
 
                 }
@@ -236,20 +246,22 @@ public class Main
 
                     operator="*";
 
-                    if(num1Set==false){
+                   if(num1Set==false){
                         sum1= Integer.parseInt(out.getText());
                         out.setText("*");
                         num1Set=true;
-                    }else {
-                        if(num1Set==true){
-                            sum2= Integer.parseInt(out.getText());
-                            num2Set=true;
-                            total = addSum();
-                            String finalNum = Integer.toString(total);
-                            out.setText(finalNum);
-                        }
+                        System.out.println("sum 1 is "+sum1+" sum 2 is "+sum2);
+                    }else if(num1Set==true){
+                        sum2= Integer.parseInt(out.getText());
+                        out.setText("");
 
-                        
+                        total = addSum();
+                        String finalNum = Integer.toString(total);
+                        //out.setText(finalNum);
+                        sum1=0;
+                        sum2=0;
+                        num1Set=false;
+                        System.out.println("sum 1 is "+sum1+" sum 2 is "+sum2+" "+" "+finalNum);
                     }
                 }
             });
@@ -259,9 +271,23 @@ public class Main
                 public void actionPerformed(ActionEvent e){
 
                     operator="/";
+ if(num1Set==false){
+                        sum1= Integer.parseInt(out.getText());
+                        out.setText("/");
+                        num1Set=true;
+                        System.out.println("sum 1 is "+sum1+" sum 2 is "+sum2);
+                    }else if(num1Set==true){
+                        sum2= Integer.parseInt(out.getText());
+                        out.setText("");
 
-                    sum1= Integer.parseInt(out.getText());
-                    out.setText("/");
+                        total = addSum();
+                        String finalNum = Integer.toString(total);
+                        //out.setText(finalNum);
+                        sum1=0;
+                        sum2=0;
+                        num1Set=false;
+                        System.out.println("sum 1 is "+sum1+" sum 2 is "+sum2+" "+" "+finalNum);
+                    }
 
                 }
             });
@@ -274,9 +300,16 @@ public class Main
 
                         total = addSum();
                         finalNum = Integer.toString(total);
+                    }else if(operator.equals("*")){
+                        sum2= Integer.parseInt(out.getText());
+                        out.setText("");
+
+                        total = addSum();
+                        finalNum = Integer.toString(total);
                     }
 
                     //sum1= Integer.parseInt(out.getText());
+                            operator="";
                             num1Set=false;
                             num2Set=false;
                             sum1=0;
@@ -295,12 +328,13 @@ public class Main
                    
 
                     //sum1= Integer.parseInt(out.getText());
+                            operator="";
                             num1Set=false;
                             num2Set=false;
                             sum1=0;
                             sum2=0;
                             total=0;
-                            finalNum="0";
+                            finalNum="";
                             out.setText(finalNum);
                         
 
