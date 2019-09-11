@@ -4,9 +4,9 @@ Tell the reader (someone who does not know anything about this project)
 all he/she needs to know. The comments should usually include at least:
 ------------------------------------------------------------------------
 
-PROJECT TITLE:
-PURPOSE OF PROJECT:
+PROJECT TITLE:Simple Java Calc
+PURPOSE OF PROJECT:For Fun
 VERSION or DATE:
-HOW TO START THIS PROJECT:
-AUTHORS:
-USER INSTRUCTIONS:
+HOW TO START THIS PROJECT:Import this project into the bluej ide.
+AUTHORS:Aussie Worz
+USER INSTRUCTIONS:A simple calc with gui.
