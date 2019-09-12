@@ -12,19 +12,19 @@ import java.awt.event.*;
 public class Main
 {
     // instance variables - replace the example below with your own
-    private int x;
-    private int y;
-    private int sum1;
-    private int sum2;
-    private String operator;
-    private boolean num1Set = false;
-    private boolean num2Set = false;
-    public int total = 0;
-    String finalNum = "";
+    public static int x;
+    private static int y;
+    private static int sum1;
+    private static int sum2;
+    private static String operator;
+    private static boolean num1Set = false;
+    private static boolean num2Set = false;
+    public static int total = 0;
+    public static String finalNum = "";
     /**
      * Constructor for objects of class Main
      */
-    public Main()
+    public static void main(String[] args)
     {
         // initialise instance variables
         sum1=x;
@@ -351,7 +351,7 @@ public class Main
                  * @return     the sum of x and y 
                  */
 
-        public int addSum( ){
+        public static int addSum( ){
             int result =0;
             if(operator.equals("*")){
                 int theTotal = sum1 * sum2;
