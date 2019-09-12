@@ -67,6 +67,7 @@ public class Main
         panel2.add(b2);
         panel2.add(b3);
         panel2.add(b4);
+        panel2.add(b5);
         panel2.add(b6);
         panel2.add(b7);
         panel2.add(b8);
@@ -85,9 +86,9 @@ public class Main
                 public void actionPerformed(ActionEvent e){
 
                     if(out.getText().equals("+") || out.getText().equals("-")|| out.getText().equals("/")|| out.getText().equals("*")){
-                    out.setText("0");
+                        out.setText("0");
                     }else{
-                    out.setText(out.getText()+0);
+                        out.setText(out.getText()+0);
                     }
 
                 }
@@ -97,9 +98,9 @@ public class Main
                 public void actionPerformed(ActionEvent e){
 
                     if(out.getText().equals("+") || out.getText().equals("-")|| out.getText().equals("/")|| out.getText().equals("*")){
-                    out.setText("1");
+                        out.setText("1");
                     }else{
-                    out.setText(out.getText()+1);
+                        out.setText(out.getText()+1);
                     }
 
                 }
@@ -109,9 +110,9 @@ public class Main
                 public void actionPerformed(ActionEvent e){
 
                     if(out.getText().equals("+") || out.getText().equals("-")|| out.getText().equals("/")|| out.getText().equals("*")){
-                    out.setText("2");
+                        out.setText("2");
                     }else{
-                    out.setText(out.getText()+2);
+                        out.setText(out.getText()+2);
                     }
 
                 }
@@ -123,69 +124,68 @@ public class Main
 
                 }
             });
-            b4.addActionListener(new ActionListener(){
+        b4.addActionListener(new ActionListener(){
                 @Override
                 public void actionPerformed(ActionEvent e){
                     if(out.getText().equals("+") || out.getText().equals("-")|| out.getText().equals("/")|| out.getText().equals("*")){
-                    out.setText("4");
+                        out.setText("4");
                     }else{
-                    out.setText(out.getText()+4);
+                        out.setText(out.getText()+4);
                     }
 
                 }
             });
-            b5.addActionListener(new ActionListener(){
+        b5.addActionListener(new ActionListener(){
                 @Override
                 public void actionPerformed(ActionEvent e){
-                   if(out.getText().equals("+") || out.getText().equals("-")|| out.getText().equals("/")|| out.getText().equals("*")){
-                    out.setText("5");
+                    if(out.getText().equals("+") || out.getText().equals("-")|| out.getText().equals("/")|| out.getText().equals("*")){
+                        out.setText("5");
                     }else{
-                    out.setText(out.getText()+5);
+                        out.setText(out.getText()+5);
                     }
 
                 }
             });
-            b6.addActionListener(new ActionListener(){
+        b6.addActionListener(new ActionListener(){
                 @Override
                 public void actionPerformed(ActionEvent e){
                     if(out.getText().equals("+") || out.getText().equals("-")|| out.getText().equals("/")|| out.getText().equals("*")){
-                    out.setText("6");
+                        out.setText("6");
                     }else{
-                    out.setText(out.getText()+6);
+                        out.setText(out.getText()+6);
                     }
 
                 }
             });
-            b7.addActionListener(new ActionListener(){
+        b7.addActionListener(new ActionListener(){
                 @Override
                 public void actionPerformed(ActionEvent e){
                     if(out.getText().equals("+") || out.getText().equals("-")|| out.getText().equals("/")|| out.getText().equals("*")){
-                    out.setText("7");
+                        out.setText("7");
                     }else{
-                    out.setText(out.getText()+7);
+                        out.setText(out.getText()+7);
                     }
 
                 }
             });
-             b8.addActionListener(new ActionListener(){
+        b8.addActionListener(new ActionListener(){
                 @Override
                 public void actionPerformed(ActionEvent e){
                     if(out.getText().equals("+") || out.getText().equals("-")|| out.getText().equals("/")|| out.getText().equals("*")){
-                    out.setText("8");
+                        out.setText("8");
                     }else{
-                    out.setText(out.getText()+8);
+                        out.setText(out.getText()+8);
                     }
-                    
 
                 }
             });
-             b9.addActionListener(new ActionListener(){
+        b9.addActionListener(new ActionListener(){
                 @Override
                 public void actionPerformed(ActionEvent e){
                     if(out.getText().equals("+") || out.getText().equals("-")|| out.getText().equals("/")|| out.getText().equals("*")){
-                    out.setText("9");
+                        out.setText("9");
                     }else{
-                    out.setText(out.getText()+9);
+                        out.setText(out.getText()+9);
                     }
 
                 }
@@ -246,7 +246,7 @@ public class Main
 
                     operator="*";
 
-                   if(num1Set==false){
+                    if(num1Set==false){
                         sum1= Integer.parseInt(out.getText());
                         out.setText("*");
                         num1Set=true;
@@ -271,7 +271,7 @@ public class Main
                 public void actionPerformed(ActionEvent e){
 
                     operator="/";
- if(num1Set==false){
+                    if(num1Set==false){
                         sum1= Integer.parseInt(out.getText());
                         out.setText("/");
                         num1Set=true;
@@ -295,7 +295,7 @@ public class Main
                 @Override
                 public void actionPerformed(ActionEvent e){
                     if(operator.equals("+")){
-                       sum2= Integer.parseInt(out.getText());
+                        sum2= Integer.parseInt(out.getText());
                         out.setText("");
 
                         total = addSum();
@@ -306,70 +306,77 @@ public class Main
 
                         total = addSum();
                         finalNum = Integer.toString(total);
+                    }else if(operator.equals("-")){
+                        sum2= Integer.parseInt(out.getText());
+                        out.setText("");
+
+                        total = addSum();
+                        finalNum = Integer.toString(total);
+                    }else if(operator.equals("/")){
+                        sum2= Integer.parseInt(out.getText());
+                        out.setText("");
+
+                        total = addSum();
+                        finalNum = Integer.toString(total);
                     }
 
                     //sum1= Integer.parseInt(out.getText());
-                            operator="";
-                            num1Set=false;
-                            num2Set=false;
-                            sum1=0;
-                            sum2=0;
-                            total=0;
-                            out.setText(finalNum);
-                        
+                    operator="";
+                    num1Set=false;
+                    num2Set=false;
+                    sum1=0;
+                    sum2=0;
+                    total=0;
+                    out.setText(finalNum);
 
-                    }
-
+                }
                     
-                });
-                  bClear.addActionListener(new ActionListener(){
+            });
+        bClear.addActionListener(new ActionListener(){
                 @Override
                 public void actionPerformed(ActionEvent e){
-                   
 
                     //sum1= Integer.parseInt(out.getText());
-                            operator="";
-                            num1Set=false;
-                            num2Set=false;
-                            sum1=0;
-                            sum2=0;
-                            total=0;
-                            finalNum="";
-                            out.setText(finalNum);
-                        
+                    operator="";
+                    num1Set=false;
+                    num2Set=false;
+                    sum1=0;
+                    sum2=0;
+                    total=0;
+                    finalNum="";
+                    out.setText(finalNum);
 
-                    }
-
+                }
                     
-                });
-            }
-
-                /**
-                 * An example of a method - replace this comment with your own
-                 * 
-                 * @param  y   a sample parameter for a method
-                 * @return     the sum of x and y 
-                 */
-
-        public static int addSum( ){
-            int result =0;
-            if(operator.equals("*")){
-                int theTotal = sum1 * sum2;
-                result = theTotal;
-            }else
-            if(operator.equals("+")){
-                int theTotal = sum1 + sum2;
-                result = theTotal;
-            }else
-            if(operator.equals("/")){
-                int theTotal = sum1 / sum2;
-                result = theTotal;
-            }
-            else
-            if(operator.equals("-")){
-                int theTotal = sum1 - sum2;
-                result = theTotal;
-            }
-            return result;
-        }
+            });
     }
+
+    /**
+     * An example of a method - replace this comment with your own
+     * 
+     * @param  y   a sample parameter for a method
+     * @return     the sum of x and y 
+     */
+
+    public static int addSum( ){
+        int result =0;
+        if(operator.equals("*")){
+            int theTotal = sum1 * sum2;
+            result = theTotal;
+        }else
+        if(operator.equals("+")){
+            int theTotal = sum1 + sum2;
+            result = theTotal;
+        }else
+        if(operator.equals("/")){
+            int theTotal = sum1 / sum2;
+            result = theTotal;
+        }
+        else
+        if(operator.equals("-")){
+            int theTotal = sum1 - sum2;
+            result = theTotal;
+        }
+        return result;
+    }
+}
