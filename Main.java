@@ -12,14 +12,14 @@ import java.awt.event.*;
 public class Main
 {
     // instance variables - replace the example below with your own
-    public static int x;
-    private static int y;
-    private static int sum1;
-    private static int sum2;
+    public static double x;
+    private static double y;
+    private static double sum1;
+    private static double sum2;
     private static String operator;
     private static boolean num1Set = false;
     private static boolean num2Set = false;
-    public static int total = 0;
+    public static double total = 0;
     public static String finalNum = "";
     /**
      * Constructor for objects of class Main
@@ -196,16 +196,16 @@ public class Main
 
                     operator="+";
                     if(num1Set==false){
-                        sum1= Integer.parseInt(out.getText());
+                        sum1= Double.parseDouble(out.getText());
                         out.setText("+");
                         num1Set=true;
                         System.out.println("sum 1 is "+sum1+" sum 2 is "+sum2);
                     }else if(num1Set==true){
-                        sum2= Integer.parseInt(out.getText());
+                        sum2= Double.parseDouble(out.getText());
                         out.setText("");
 
                         total = addSum();
-                        String finalNum = Integer.toString(total);
+                        String finalNum = Double.toString(total);
                         //out.setText(finalNum);
                         sum1=0;
                         sum2=0;
@@ -221,16 +221,16 @@ public class Main
 
                     operator="-";
                     if(num1Set==false){
-                        sum1= Integer.parseInt(out.getText());
+                        sum1= Double.parseDouble(out.getText());
                         out.setText("-");
                         num1Set=true;
                         System.out.println("sum 1 is "+sum1+" sum 2 is "+sum2);
                     }else if(num1Set==true){
-                        sum2= Integer.parseInt(out.getText());
+                        sum2= Double.parseDouble(out.getText());
                         out.setText("");
 
                         total = addSum();
-                        String finalNum = Integer.toString(total);
+                        String finalNum = Double.toString(total);
                         //out.setText(finalNum);
                         sum1=0;
                         sum2=0;
@@ -247,16 +247,16 @@ public class Main
                     operator="*";
 
                     if(num1Set==false){
-                        sum1= Integer.parseInt(out.getText());
+                        sum1= Double.parseDouble(out.getText());
                         out.setText("*");
                         num1Set=true;
                         System.out.println("sum 1 is "+sum1+" sum 2 is "+sum2);
                     }else if(num1Set==true){
-                        sum2= Integer.parseInt(out.getText());
+                        sum2= Double.parseDouble(out.getText());
                         out.setText("");
 
                         total = addSum();
-                        String finalNum = Integer.toString(total);
+                        String finalNum = Double.toString(total);
                         //out.setText(finalNum);
                         sum1=0;
                         sum2=0;
@@ -272,16 +272,16 @@ public class Main
 
                     operator="/";
                     if(num1Set==false){
-                        sum1= Integer.parseInt(out.getText());
+                        sum1= Double.parseDouble(out.getText());
                         out.setText("/");
                         num1Set=true;
                         System.out.println("sum 1 is "+sum1+" sum 2 is "+sum2);
                     }else if(num1Set==true){
-                        sum2= Integer.parseInt(out.getText());
+                        sum2= Double.parseDouble(out.getText());
                         out.setText("");
 
                         total = addSum();
-                        String finalNum = Integer.toString(total);
+                        String finalNum = Double.toString(total);
                         //out.setText(finalNum);
                         sum1=0;
                         sum2=0;
@@ -295,29 +295,29 @@ public class Main
                 @Override
                 public void actionPerformed(ActionEvent e){
                     if(operator.equals("+")){
-                        sum2= Integer.parseInt(out.getText());
+                        sum2= Double.parseDouble(out.getText());
                         out.setText("");
 
                         total = addSum();
-                        finalNum = Integer.toString(total);
+                        finalNum = Double.toString(total);
                     }else if(operator.equals("*")){
-                        sum2= Integer.parseInt(out.getText());
+                        sum2= Double.parseDouble(out.getText());
                         out.setText("");
 
                         total = addSum();
-                        finalNum = Integer.toString(total);
+                        finalNum = Double.toString(total);
                     }else if(operator.equals("-")){
-                        sum2= Integer.parseInt(out.getText());
+                        sum2= Double.parseDouble(out.getText());
                         out.setText("");
 
                         total = addSum();
-                        finalNum = Integer.toString(total);
+                        finalNum = Double.toString(total);
                     }else if(operator.equals("/")){
-                        sum2= Integer.parseInt(out.getText());
+                        sum2= Double.parseDouble(out.getText());
                         out.setText("");
 
                         total = addSum();
-                        finalNum = Integer.toString(total);
+                        finalNum = Double.toString(total);
                     }
 
                     //sum1= Integer.parseInt(out.getText());
@@ -358,23 +358,23 @@ public class Main
      * @return     the sum of x and y 
      */
 
-    public static int addSum( ){
-        int result =0;
+    public static double addSum( ){
+        double result =0;
         if(operator.equals("*")){
-            int theTotal = sum1 * sum2;
+            double theTotal = sum1 * sum2;
             result = theTotal;
         }else
         if(operator.equals("+")){
-            int theTotal = sum1 + sum2;
+            double theTotal = sum1 + sum2;
             result = theTotal;
         }else
         if(operator.equals("/")){
-            int theTotal = sum1 / sum2;
+            double theTotal = sum1 / sum2;
             result = theTotal;
         }
         else
         if(operator.equals("-")){
-            int theTotal = sum1 - sum2;
+            double theTotal = sum1 - sum2;
             result = theTotal;
         }
         return result;
